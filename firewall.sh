@@ -10,7 +10,7 @@ iptables -X
 # Default policy
 iptables -P INPUT ACCEPT
 iptables -P FORWARD ACCEPT
-iptabels -P OUTPUT ACCEPT
+iptables -P OUTPUT ACCEPT
 
 # Reject 
 # iptables -A INPUT -i eth0 -p tcp --dport 80 -j REJECT
