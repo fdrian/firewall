@@ -1,10 +1,12 @@
 # Simple firewall with knockd
-## Adriano Freitas - https://adrianofreitas.me
+## Adriano Freitas - 2022
 
+# Knockd
 1. Requeriments
 ```
 apt install iptables
 apt install knockd
+apt install nmap
 ```
 
 2. Edit file /etc/knockd.conf
@@ -23,7 +25,23 @@ START_KNOCKD=1
 /etc/init.d/knockd enable
 /etc/init.d/knockd start
 ```
+5. Setting and Start firewall script
+```
+chmod +x firewall.sh
+bash firewall.sh
+```
 
-
-
+# Port Knock
+1. Setting
+```
+chmod +x pknock.sh
+```
+2. Open ports
+```
+bash pknock.sh --open
+```
+3. Close ports
+```
+bash pknock.sh --close
+```
 
