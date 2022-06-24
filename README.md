@@ -1,19 +1,27 @@
 # Simple firewall with knockd
 ## Adriano Freitas - https://adrianofreitas.me
 
-## Requeriments
+1. Requeriments
+```
 apt install iptables
 apt install knockd
+```
 
-## Edit file /etc/knockd.conf
+2. Edit file /etc/knockd.conf
+```
 [openSSH]
 	command	= /sbin/iptables -I INPUT -s %IP% -p tcp --dport 22 -j ACCEPT
+```
 
-## Edit file /etc/default/knockd
+3. Edit file /etc/default/knockd
+```
 START_KNOCKD=1
+```
 
-## Start daemon
+4. Enable and Start daemon
+```
 /etc/init.d/knockd start
+```
 
 
 
