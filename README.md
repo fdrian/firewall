@@ -20,6 +20,7 @@ START_KNOCKD=1
 
 4. Enable and Start daemon
 ```
+/etc/init.d/knockd enable
 /etc/init.d/knockd start
 ```
 
