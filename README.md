@@ -1,5 +1,5 @@
 # Simple firewall with knockd
-## Adriano Freitas - 2022
+## Drian - 2022
 
 # Knockd
 1. Requeriments
@@ -27,21 +27,21 @@ START_KNOCKD=1
 ```
 5. Setting and Start firewall script
 ```
-chmod +x firewall.sh
+sudo chmod +x firewall.sh
 bash firewall.sh
 ```
 
 # Port Knock
 1. Setting
 ```
-chmod +x pknock.sh
+sudo chmod +x pknock.sh
 ```
 2. Open ports
 ```
-bash pknock.sh --open
+bash pknock.sh open
 ```
 3. Close ports
 ```
-bash pknock.sh --close
+bash pknock.sh close
 ```
 
