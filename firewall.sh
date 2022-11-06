@@ -24,7 +24,7 @@ iptables -A INPUT  -p icmp -m state --state ESTABLISHED,RELATED     -j ACCEPT
 
 # SSH
 iptables -A INPUT -i eth0 -p tcp --dport 22 -j LOG --log-prefix "SSH: " --log-level info
-iptables -A INPUT -i eth0 -p tcp --dport 22 -s 10.0.0.101/32 -j ACCEPT
+iptables -A INPUT -i eth0 -p tcp --dport 22 -j ACCEPT
 
 # DNS
 iptables -A OUTPUT -o eth0 -p udp --dport 5053 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
